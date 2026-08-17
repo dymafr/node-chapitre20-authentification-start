@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(
   session({
-    secret: 'cersei',
+    secret: process.env.SESSION_SECRET,
     resave: false,
     name: 'jesuisunid',
     saveUninitialized: true,

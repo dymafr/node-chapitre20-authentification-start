@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 exports.clientPromise = mongoose
   .connect(
-    'mongodb+srv://alex:qwe@cluster0-l4izx.gcp.mongodb.net/test?retryWrites=true'
+    process.env.MONGO_URL
   )
   .then((client) => {
     console.log('Connected to MongoDB');
